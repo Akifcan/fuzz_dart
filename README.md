@@ -21,6 +21,7 @@ void main(List<String> arguments) {
 - We have a control here.
 - But we don't have any constraint for substring. If name variable length less than 10 this function will throw error.
 - So fuzz testing finds bug like this. And generate html file.
+- Run this file `dart run {FILENAME}`
 
 ```
  void main(List<String> arguments) {
