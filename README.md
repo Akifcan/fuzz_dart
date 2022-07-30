@@ -4,6 +4,17 @@
 
 - Fuzz testing is a way detect unexcepted inputs for functions.
 
+- Create a folder for fuzz testing.
+- And put your files under this folder.
+
+import 'package:fuzz_dart/fuzz_dart.dart' as fuzz_dart;
+
+```
+void main(List<String> arguments) {
+
+}
+```
+
 ## Example.
 
 - This is greeter function.
@@ -12,13 +23,21 @@
 - So fuzz testing finds bug like this. And generate html file.
 
 ```
- greeter(String name, String lastname) {
+ void main(List<String> arguments) {
+  greeter(String name, String lastname) {
     if (name.length > 13) {
       throw Exception('name is so long');
     }
-    name.substring(10);
     return "hello $name $lastname";
   }
+
+  fuzz_dart.Fuzzer greeterFunctionFuzzer = fuzz_dart.Fuzzer(
+      type: [fuzz_dart.AcceptedTypes.string],
+      iterateCount: 12,
+      fileName: 'greeter-fuzzer');
+  greeterFunctionFuzzer.iterate(greeter, 'greeting!',
+      description: 'Returns name and lastname');
+}
 
 ```
 
@@ -78,3 +97,8 @@ Exception: name is so long - Arguments: [ylne}rmrwrear_fv~g`z{{dz_ecsefk|rot_bvf
 ```
 
 ## HTML OUTPUTS
+
+![img1](https://i.hizliresim.com/hkttgcu.PNG)
+![img2](https://i.hizliresim.com/aoeelfz.PNG)
+![img3](https://i.hizliresim.com/3chmhm1.PNG)
+![img4](https://i.hizliresim.com/d4t27jv.PNG)
