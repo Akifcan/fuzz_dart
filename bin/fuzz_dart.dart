@@ -34,7 +34,7 @@ void main(List<String> arguments) {
 
   fuzz_dart.Fuzzer greeterFunctionFuzzer = fuzz_dart.Fuzzer(
       type: [fuzz_dart.AcceptedTypes.string],
-      iterateCount: 1,
+      iterateCount: 12,
       fileName: 'greeter-fuzzer');
 
   fuzz_dart.Fuzzer listFuzzer = fuzz_dart.Fuzzer(type: [

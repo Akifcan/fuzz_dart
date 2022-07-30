@@ -1,10 +1,11 @@
 name: fuzz_dart
-description: A sample command-line application.
+description: Find unexecpted inputs on your functions.
 version: 1.0.0
-# homepage: https://www.example.com
+homepage: https://github.com/Akifcan/fuzz_dart
+repository: https://github.com/Akifcan/fuzz_dart
 
 environment:
-  sdk: '>=2.17.1 <3.0.0'
+  sdk: ">=2.17.1 <3.0.0"
 
 # dependencies:
 #   path: ^1.8.0
