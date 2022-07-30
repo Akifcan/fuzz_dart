@@ -29,6 +29,7 @@ void main(List<String> arguments) {
     if (name.length > 13) {
       throw Exception('name is so long');
     }
+    name.substring(10)
     return "hello $name $lastname";
   }
 

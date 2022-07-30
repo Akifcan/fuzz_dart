@@ -1,6 +1,6 @@
 name: fuzz_dart
 description: Find unexecpted inputs on your functions.
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/Akifcan/fuzz_dart
 repository: https://github.com/Akifcan/fuzz_dart
 
